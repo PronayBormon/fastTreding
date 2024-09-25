@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title  -->
+    <title>Welcome to FastTrading</title>
+    <!-- bootstrap 5.3  -->
+    <link rel="stylesheet" href="assets/bootstrap-5.3.2/css/bootstrap.min.css">
+    <!-- fontawsome   -->
+    <link rel="stylesheet" href="assets/Font-Awesome-Pro-6.2.1/css/all.min.css">
+
+    <!-- style css  -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <!-- header part start here  -->
+    <div class="main_navbar">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" class="img-fluid"></a>
+                <!-- =========== -->
+                <div class="offcanvas offcanvas-start " data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                    aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header text-end">
+                        <button type="button" class="btn_close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="d-flex aligh-items-center w-100 justify-content-between">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="market.html">Markets</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="future.html">Futures</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <!-- mobile login register  -->
+                        <ul class="navbar-nav ms-auto mobile_ group_btns mb-2 mb-lg-0  d-sm-none ">
+                            <li class="nav-item w-50">
+                                <a class="nav-link btn_login w-100" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item w-50">
+                                <a class="nav-link btn_signup w-100" href="register.html">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="d-none d-sm-flex">
+                        <!-- desktop login register               -->
+                        <ul class="navbar-nav ms-auto group_btns mb-2 mb-lg-0 d-none d-lg-flex">
+                            <li class="nav-item">
+                                <a class="nav-link btn_login" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn_signup" href="register.html">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item dropdown profile_pic">
+                            <a class="nav-link  dropdown-toggle" href="market.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                                <div>
+                                    <h4>User</h4>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="profile.html">
+                                        <i class="fa-solid fa-user"></i>
+                                        Profile</a></li>
+                                <li><a class="dropdown-item" href="wallet.html">
+                                        <i class="fa-solid fa-wallet"></i>
+                                        Wallet</a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="btn btn_menu navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <!-- header part end here  -->
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 hot_tab pc_view">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-Favorites-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-Favorites" type="button" role="tab"
+                                        aria-controls="pills-Favorites" aria-selected="true">Favorites</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-Hot-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-Hot" type="button" role="tab" aria-controls="pills-Hot"
+                                        aria-selected="false">Hot</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-all-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all"
+                                        aria-selected="false">All</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="pills-tabContent">
+                            <!-- favorite tab contnet  -->
+                            <div class="tab-pane fade show active" id="pills-Favorites" role="tabpanel"
+                                aria-labelledby="pills-Favorites-tab">
+                                <!-- tab content here  -->
+                                <div class="hot_part">
+                                    <ul>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!-- tab content end here  -->
+                            </div>
+                            <!-- favorite tab content  -->
+
+                            <!-- Hot tab contnet  -->
+                            <div class="tab-pane fade  " id="pills-Hot" role="tabpanel" aria-labelledby="pills-Hot-tab">
+                                <!--  tab content here  -->
+                                <div class="hot_part">
+                                    <ul>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!--  tab content end here  -->
+                            </div>
+                            <!-- Hot tab content  -->
+
+                            <!-- Hot tab contnet  -->
+                            <div class="tab-pane fade  " id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                                <!--  tab content here  -->
+                                <div class="hot_part">
+                                    <ul>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="coins">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div><i class="fa-solid fa-star"></i></div>
+                                                    <div><img src="images/bitcoin.png" alt=""></div>
+                                                    <div>
+                                                        <h2>BTC <span>/usdt</span></h2>
+                                                        <p>Volume : 0002320.3343 M</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2>342734723.343</h2>
+                                                    <p class="text-end">NaN</p>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!--  tab content end here  -->
+                            </div>
+                            <!-- Hot tab content  -->
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <!-- chart part start here  -->
+                    <div class="col-md-12">
+                        <!-- topbar part start here  -->
+                        <div class="top_navbar">
+                            <div class="row ">
+                                <div class="col-10">
+                                    <div class="top_left">
+                                        <div>
+                                            <a class="" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                                role="button" aria-controls="offcanvasExample">
+                                                <img src="images/arrow.png" alt="">
+                                            </a>
+
+                                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                                                aria-labelledby="offcanvasExampleLabel">
+                                                <div class="offcanvas-header">
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Markets
+                                                        </h5>
+                                                        <button type="button " class="btn_close"
+                                                            data-bs-dismiss="offcanvas" aria-label="Close"><i
+                                                                class="fa-solid fa-xmark"></i></button>
+                                                    </div>
+
+                                                    <div>
+                                                        <form action="">
+                                                            <input type="text" name="search" placeholder="search"
+                                                                class="form-control">
+                                                        </form>
+                                                    </div>
+                                                    <!-- tabs part start here  -->
+                                                    <div>
+                                                        <ul class="nav nav-pills tab_btn mb-3" id="pills-tab"
+                                                            role="tablist">
+                                                            <li class="nav-item" role="presentation">
+                                                                <button class="nav-link active" id="pills-fav-tab"
+                                                                    data-bs-toggle="pill" data-bs-target="#pills-fav"
+                                                                    type="button" role="tab" aria-controls="pills-home"
+                                                                    aria-selected="true">Favorite <span></span></button>
+
+                                                            </li>
+                                                            <li class="nav-item" role="presentation">
+                                                                <button class="nav-link" id="pills-BUSD-tab"
+                                                                    data-bs-toggle="pill" data-bs-target="#pills-BUSD"
+                                                                    type="button" role="tab" aria-controls="pills-BUSD"
+                                                                    aria-selected="false">Hot<span></span></button>
+
+                                                            </li>
+                                                            <li class="nav-item" role="presentation">
+                                                                <button class="nav-link" id="pills-TUSD-tab"
+                                                                    data-bs-toggle="pill" data-bs-target="#pills-TUSD"
+                                                                    type="button" role="tab"
+                                                                    aria-controls="pills-contact"
+                                                                    aria-selected="false">All <span></span></button>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- tab button end here  -->
+                                                </div>
+                                                <div class="offcanvas-body">
+
+
+                                                    <!--tab  main content part start here  -->
+                                                    <div class="tab_function">
+                                                        <div class="tab-content" id="pills-tabContent">
+                                                            <div class="tab-pane fade show active" id="pills-fav"
+                                                                role="tabpanel" aria-labelledby="pills-fav-tab">
+                                                                <!-- Favorite part start here  -->
+                                                                <div class="col-md-12 ">
+                                                                    <div class="nav flex-column nav-pills"
+                                                                        role="tablist" aria-orientation="vertical">
+                                                                        <a class="nav-link coin_select d-flex justify-content-between align-items-center active"
+                                                                            data-toggle="pill" href="#coinBTC"
+                                                                            role="tab" aria-selected="true">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/bitcoin.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>BTC</h2>
+                                                                                    <p>Bitcoin</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>4.5484254</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="nav-link d-flex coin_select justify-content-between align-items-center"
+                                                                            data-toggle="pill" href="#coinETH"
+                                                                            role="tab" aria-selected="false">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/eth.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>ETH</h2>
+                                                                                    <p>Ethereum</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>13.454845</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="nav-link coin_select d-flex justify-content-between align-items-center"
+                                                                            data-toggle="pill" href="#coinBNB"
+                                                                            role="tab" aria-selected="false">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/bnb.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>BNB</h2>
+                                                                                    <p>Binance</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>35.4842458</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="nav-link coin_select d-flex justify-content-between align-items-center"
+                                                                            data-toggle="pill" href="#coinTRX"
+                                                                            role="tab" aria-selected="false">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/trx.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>TRX</h2>
+                                                                                    <p>Tron</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>4.458941</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- favorite part end here  -->
+                                                            </div>
+                                                            <div class="tab-pane fade" id="pills-BUSD" role="tabpanel"
+                                                                aria-labelledby="pills-BUSD-tab">
+                                                                <!-- BUSD part start here  -->
+                                                                <div class="col-md-12 ">
+                                                                    <div class="nav flex-column nav-pills"
+                                                                        role="tablist" aria-orientation="vertical">
+                                                                        <a class="nav-link coin_select d-flex justify-content-between align-items-center active"
+                                                                            data-toggle="pill" href="#coinBTC"
+                                                                            role="tab" aria-selected="true">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/bitcoin.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>BTC</h2>
+                                                                                    <p>Bitcoin</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>4.5484254</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="nav-link d-flex coin_select justify-content-between align-items-center"
+                                                                            data-toggle="pill" href="#coinETH"
+                                                                            role="tab" aria-selected="false">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/eth.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>ETH</h2>
+                                                                                    <p>Ethereum</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>13.454845</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="nav-link coin_select d-flex justify-content-between align-items-center"
+                                                                            data-toggle="pill" href="#coinBNB"
+                                                                            role="tab" aria-selected="false">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/bnb.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>BNB</h2>
+                                                                                    <p>Binance</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>35.4842458</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="nav-link coin_select d-flex justify-content-between align-items-center"
+                                                                            data-toggle="pill" href="#coinTRX"
+                                                                            role="tab" aria-selected="false">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/trx.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>TRX</h2>
+                                                                                    <p>Tron</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>4.458941</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- BUSD part end here  -->
+                                                            </div>
+                                                            <div class="tab-pane fade" id="pills-TUSD" role="tabpanel"
+                                                                aria-labelledby="pills-TUSD-tab">
+                                                                <!-- TUSD part start here  -->
+                                                                <div class="col-md-12 ">
+                                                                    <div class="nav flex-column nav-pills"
+                                                                        role="tablist" aria-orientation="vertical">
+                                                                        <a class="nav-link coin_select d-flex justify-content-between align-items-center active"
+                                                                            data-toggle="pill" href="#coinBTC"
+                                                                            role="tab" aria-selected="true">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/bitcoin.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>BTC</h2>
+                                                                                    <p>Bitcoin</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>4.5484254</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="nav-link d-flex coin_select justify-content-between align-items-center"
+                                                                            data-toggle="pill" href="#coinETH"
+                                                                            role="tab" aria-selected="false">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/eth.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>ETH</h2>
+                                                                                    <p>Ethereum</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>13.454845</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="nav-link coin_select d-flex justify-content-between align-items-center"
+                                                                            data-toggle="pill" href="#coinBNB"
+                                                                            role="tab" aria-selected="false">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/bnb.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>BNB</h2>
+                                                                                    <p>Binance</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>35.4842458</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="nav-link coin_select d-flex justify-content-between align-items-center"
+                                                                            data-toggle="pill" href="#coinTRX"
+                                                                            role="tab" aria-selected="false">
+                                                                            <div class="d-flex">
+                                                                                <div class="sidebar_star"><i
+                                                                                        class="fa-solid fa-star"></i>
+                                                                                </div>
+                                                                                <img src="images/trx.png" alt="btc">
+                                                                                <div>
+                                                                                    <h2>TRX</h2>
+                                                                                    <p>Tron</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>4.458941</h3>
+                                                                                <p class="text-end"><i
+                                                                                        class="icon ion-md-lock"></i>
+                                                                                    0.0000000</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- TUSD part end here  -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- tabs part end here    -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Coin title  -->
+                                        <h1> btc/usdt <span>+0.50%</span></h1>
+                                        <div class="min_btns">
+                                            <button type="button" class="btn btn_time">10min</button>
+                                            <button type="button" class="btn btn_time">30min</button>
+                                            <button type="button" class="btn btn_time">45min</button>
+                                            <button type="button" class="btn btn_time">1Hour</button>
+                                            <button type="button" class="btn btn_time">1day</button>
+                                            <button type="button" class="btn btn_time">1Week</button>
+                                            <button type="button" class="btn btn_time">1Month</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-2 d-flex justify-content-end align-items-center">
+                                    <div class="top_right">
+                                        <div class="candle_icon pc_view">
+                                            <a href="#">
+                                                <img src="images/candle.png" class="candle_light" alt="">
+                                                <img src="images/candle dark.png" class="candle_dark" alt="">
+                                            </a>
+                                        </div>
+
+                                        <div class="candle_icon mobile_view">
+                                            <a>
+                                                <button
+                                                    class="d-flex justify-content-center align-items-center btn_candle"
+                                                    id="myButton" onclick="toggleButton()">
+                                                    <img src="images/candle-active.png" class=" icn_active" alt="">
+                                                    <img src="images/candle.png" class=" icn_inactive" alt="">
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- topbar part end here  -->
+
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container futures_widgets " id="inactiveDiv">
+                            <div id="tradingview_e223c"></div>
+                            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/"
+                                    rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on
+                                        TradingView</span></a></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            <script type="text/javascript">
+                                new TradingView.widget(
+                                    {
+                                        "autosize": true,
+                                        "symbol": "BITSTAMP:BTCUSD",
+                                        "interval": "1",
+                                        "timezone": "Etc/UTC",
+                                        "theme": "dark",
+                                        "style": "1",
+                                        "locale": "en",
+                                        "toolbar_bg": "#f1f3f6",
+                                        "enable_publishing": false,
+                                        "backgroundColor": "rgba(8, 19, 34, 1)",
+                                        "hide_top_toolbar": true,
+                                        "hide_legend": true,
+                                        "save_image": false,
+                                        "container_id": "tradingview_e223c"
+                                    }
+                                );
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+                    <!-- chart part end here  -->
+                    <!-- buy part start here  -->
+                    <div class="col-md-12">
+                        <div class="btns_part">
+                            <form action="">
+                                <div class="btns">
+
+                                    <select name="" class=" text-center" id="">
+                                        <option value="" selected><img src="images/i.png" alt="">Limite <i
+                                                class="fa-solid fa-caret-down"></i></option>
+                                        <option value="">Market</option>
+                                    </select>
+
+                                </div>
+                                <div class="btns">
+                                    <div><button><i class="fa-solid fa-minus"></i></button></div>
+                                    <div>
+                                        <h4 class="text-center">24,000.00</h4>
+                                    </div> <!--(Buying Price)-->
+                                    <div><button><i class="fa-solid fa-plus"></i></button></div>
+                                </div>
+                                <div class="btns">
+                                    <div><button><i class="fa-solid fa-minus"></i></button></div>
+                                    <div><input type="text" class="" placeholder="Ammount(BTC)"></div>
+                                    <!--Est BTC ammount-->
+                                    <div><button><i class="fa-solid fa-plus"></i></button></div>
+                                </div>
+                                <div class="btns justify-content-center">
+                                    <div class="">
+                                        <h4 class="text-center">Select Duration</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="duration_btn">
+                                            <div><button type="button">30s</button></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="duration_btn">
+                                            <div><button type="button">60s</button></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="duration_btn">
+                                            <div><button type="button">120s</button></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="duration_btn">
+                                            <div><button type="button">300s</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="percen_btn">
+                                            <div><button type="button"></button></div>
+                                            <div>
+                                                <p>25%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="percen_btn">
+                                            <div><button type="button"></button></div>
+                                            <div>
+                                                <p>50%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="percen_btn">
+                                            <div><button type="button"></button></div>
+                                            <div>
+                                                <p>75%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="percen_btn">
+                                            <div><button type="button"></button></div>
+                                            <div>
+                                                <p>100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btns justify-content-center">
+                                    <div>
+                                        <h4 class="text-center"> 0.00</h4>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="text-center avbl_css px-2">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div>Avbl: &nbsp;</div>
+                                            <div>1,000.00 <span>USDT</span></div>
+                                        </div>
+                                    </h6>
+                                </div>
+                                <div class="d-flex aligh-items-center">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#open_long"
+                                        class="btn btn-success btn_show w-50 m-1">Open Long </button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#open_long"
+                                        class="btn btn_show btn-danger w-50 m-1">Open Short </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- buy part end here  -->
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Confirm modal  -->
+    <div class="modal fade" id="open_long" tabindex="-1" aria-labelledby="open_longLabel" style="display: none;"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-0">
+                    <div class="w-10"></div>
+                    <!-- <h5 class="modal-title fs-6" id="open_longLabel"></h5> -->
+                    <div data-bs-theme="dark">
+                        <button type="button" class="btn_close text-white" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center p-4 pb-2">
+                        <i class="fa-solid fa-check confirm_icon"></i>
+                        <h5 class="text-light">Your Trade has been started</h5>
+                        <a href="market.html" class="btn_primary m_close my-3">OK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="assets/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/hideshow.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.btn_show').click(function () {
+                setTimeout(() => {
+                    $('.modal-backdrop').removeClass('show');
+                    $('.modal-backdrop').fadeOut(); //.css('display', 'none');  
+                    $('.modal').removeClass('show');
+                    $('.modal.fade').fadeOut();
+                }, 2000);
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
